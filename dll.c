@@ -83,18 +83,3 @@ void del_node(struct node** headref,int del_data)
 
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
