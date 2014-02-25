@@ -2,9 +2,6 @@
 # include <stdlib.h>
 # include "tree.h"
 
-
-
-
 int main()
 {
 	struct node* root = NULL;
@@ -22,15 +19,18 @@ int main()
 		printf("\n Enter 0 to terminate node creation: ");
 		scanf("%d",&ch);
 	}
-	printf("\n Enter the SUM to check for haspathsum: \n");
-	scanf("%d",&sum);
+	printf("\n PRINT TREE PREORDER");
+	print_tree_pre(root);
 	printf("\n PRINT TREE INORDER: \n");
 	print_tree_in(root);
+	printf("\n POST ORDER TREE TRAVERSAL: \n");
+	print_tree_po(root);
 	printf("\n SIZE of tree: %d\n",size(root));
 	printf("\n MAX DEPTH of TREE: %d\n",maxdepth(root));
 	printf("\n MIN VALUE IN TREE IS: %d\n",minval(root));
-	printf("\n POST ORDER TREE TRAVERSAL: \n");
-	print_tree_po(root);
+	printf("\n Enter the SUM to check for haspathsum: \n");
+	scanf("%d",&sum);
+
 	chk = haspathsum(root,sum);
 	if(chk ==1)
 	{

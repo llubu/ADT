@@ -100,15 +100,25 @@ int insert_node(node **dir, char *str)
 void print_trie(node *dict)
 {
     node *current = NULL;
-    int i = 0;
+    int i = 0, j = 0;
+
+    current = dict;
 
     for (i = 0; i < 27; i++)
     {
-	if (!(dic->child[0]))
+	if (i == 0 && (!current->child[0]))
 	{
-	    printf("\n EMPTY");
+	    printf("\n Str");
 	}
-	while (
+	if (current->child[i])
+	{
+	    printf("\n:%c:", current->child[('a' + i) - 1]);
+	}
+    }
+
+
+
+	
 
     
 

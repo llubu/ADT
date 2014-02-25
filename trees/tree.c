@@ -44,6 +44,24 @@ struct node* tree(struct node* c_root,int c_data)
 
 }
 
+void print_tree_pre(struct node* r)	// Pre order traversal
+{
+	if (r == NULL)
+	{
+	    return;
+	}
+	printf("\n ::%d", r->data);
+	if (r->left)
+	{
+	    print_tree_pre(r->left);
+	}
+	if (r->right)
+	{
+	    print_tree_pre(r->right);
+	}
+}
+
+
 void print_tree_in(struct node* c_root)	//Print tree nodes in INORDER TREE traversal
 {
 	struct node* r = NULL;
@@ -58,7 +76,7 @@ void print_tree_in(struct node* c_root)	//Print tree nodes in INORDER TREE trave
 		print_tree_in(r->left);
 			
 	}
-	printf("\n :: %d",r->data);
+	printf("\nIN :: %d",r->data);
 	if(r->right)
 	{
 		print_tree_in(r->right);
@@ -418,4 +436,11 @@ int isbst(struct node* r)
 	}
 	else return 0;
 }
-		
+	
+void iter_inorder(struct node* r)
+{
+
+    
+
+}
+
